@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction History</title>
+</head>
+<body>
+    <h2>Prediction History</h2>
+    <table border="1">
+        <tr>
+            <th>Age</th>
+            <th>Hypertension</th>
+            <th>Heart Disease</th>
+            <th>Avg Glucose Level</th>
+            <th>BMI</th>
+            <th>Prediction</th>
+        </tr>
+        {% for prediction in predictions %}
+        <tr>
+            <td>{{ prediction.age }}</td>
+            <td>{{ prediction.hypertension }}</td>
+            <td>{{ prediction.heart_disease }}</td>
+            <td>{{ prediction.avg_glucose_level }}</td>
+            <td>{{ prediction.bmi }}</td>
+            <td>{{ prediction.prediction }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back to Home</a>
+</body>
+</html>
